@@ -112,6 +112,8 @@
                 <version>${amps.version}</version>
                 <extensions>true</extensions>
                 <configuration>
+                	<allowGoogleTracking>false</allowGoogleTracking>
+               		<enableQuickReload>true</enableQuickReload>
                     <products>
                         <product>
                             <id>bitbucket</id>

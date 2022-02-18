@@ -10,7 +10,7 @@
   </plugin-info>  
   <!-- add our i18n resource -->  
   <resource type="i18n" name="i18n" location="citags-plugin"/>  
-  <repository-hook key="reject-tag-hook" name="Reject Tag Hook" i18n-name-key="reject-tag-hook.name" class="net.mfjassociates.bitbucket.plugins.hook.RejectTagHook"> 
+  <repository-hook key="reject-tag-hook" name="Reject Tag Hook" configurable="false" i18n-name-key="reject-tag-hook.name" class="net.mfjassociates.bitbucket.plugins.hook.RejectTagHook"> 
     <description key="reject-tag-hook.description">The Reject Tag Hook Plugin</description>  
     <icon>icon-example.png</icon>
     <scopes>

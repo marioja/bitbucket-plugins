@@ -5,8 +5,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import com.atlassian.bitbucket.auth.AuthenticationContext;
-import com.atlassian.bitbucket.event.tag.TagCreationHookRequest;
-import com.atlassian.bitbucket.event.tag.TagDeletionHookRequest;
 import com.atlassian.bitbucket.hook.repository.PreRepositoryHook;
 import com.atlassian.bitbucket.hook.repository.PreRepositoryHookContext;
 import com.atlassian.bitbucket.hook.repository.RepositoryHookRequest;

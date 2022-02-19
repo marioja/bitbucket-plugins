@@ -1,0 +1,28 @@
+{namespace reject.tag.hook.config}
+
+/**
+ * @param config
+ * @param? errors
+ */
+{template .formContents}
+    {call aui.form.textField}
+        {param id: 'prefix' /}
+        {param value: $config['prefix'] /}
+        {param labelContent}
+            {getText('reject.tag.config.prefix.label')}
+        {/param}
+        {param description: getText('reject.tag.config.prefix.description') /}
+        {param extraClasses: 'String' /}
+        {param errorTexts: $errors ? $errors['prefix'] : null /}
+    {/call}
+    {call aui.form.textField}
+        {param id: 'authorizedUsers' /}
+        {param value: $config['authorizedUsers'] /}
+        {param labelContent}
+            {getText('reject.tag.config.authorizedUsers.label')}
+        {/param}
+        {param description: getText('reject.tag.config.authorizedUsers.description') /}
+        {param extraClasses: 'String' /}
+        {param errorTexts: $errors ? $errors['authorizedUsers'] : null /}
+    {/call}
+{/template}

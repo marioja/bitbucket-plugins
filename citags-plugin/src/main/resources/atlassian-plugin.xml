@@ -9,10 +9,14 @@
     <param name="plugin-logo">images/pluginLogo.png</param> 
   </plugin-info>  
   <!-- add our i18n resource -->  
-  <resource type="i18n" name="i18n" location="citags-plugin"/>  
-  <repository-hook key="reject-tag-hook" name="Reject Tag Hook" configurable="false" i18n-name-key="reject-tag-hook.name" class="net.mfjassociates.bitbucket.plugins.hook.RejectTagHook"> 
+  <resource type="i18n" name="i18n" location="i18n/citags-plugin"/>  
+  <repository-hook key="reject-tag-hook" name="Reject Tag Hook" configurable="true" i18n-name-key="reject-tag-hook.name" class="net.mfjassociates.bitbucket.plugins.hook.RejectTagHook"> 
     <description key="reject-tag-hook.description">The Reject Tag Hook Plugin</description>  
     <icon>icon-example.png</icon>
+    <config-form name="Enter parameters" key="reject-tag-config">
+    	<view>reject.tag.hook.config.formContents</view>
+    	<directory location="/static/"/>
+    </config-form>
     <scopes>
     	<scope>project</scope>
     	<scope>repository</scope>

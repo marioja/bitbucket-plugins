@@ -8,5 +8,5 @@
                            http://www.springframework.org/schema/osgi/spring-osgi.xsd">
 
     <osgi:reference id="authenticationContext" interface="com.atlassian.bitbucket.auth.AuthenticationContext"/>
-
+    <!-- <osgi:reference id="i18nService" interface="com.atlassian.bitbucket.i18n.I18nService"/> -->
 </beans>

@@ -103,6 +103,11 @@
             <version>1.8.5</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+        	<groupId>com.atlassian.bitbucket.server</groupId>
+        	<artifactId>bitbucket-page-objects</artifactId>
+        	<scope>provided</scope>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

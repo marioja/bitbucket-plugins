@@ -12,7 +12,7 @@
   <resource type="i18n" name="i18n" location="i18n/citags-plugin"/>  
   <repository-hook key="reject-tag-hook" name="Reject Tag Hook" configurable="true" i18n-name-key="reject-tag-hook.name" class="net.mfjassociates.bitbucket.plugins.hook.RejectTagHook"> 
     <description key="reject-tag-hook.description">The Reject Tag Hook Plugin</description>  
-    <icon>icon-example.png</icon>
+    <icon>citags-plugin.png</icon>
     <config-form name="Enter parameters" key="reject-tag-config">
     	<view>reject.tag.hook.config.formContents</view>
     	<directory location="/static/"/>

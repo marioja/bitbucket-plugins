@@ -12,30 +12,15 @@
   <repositories>
     <repository>
       <id>atlassian-public</id>
+	  <name>Atlassian repository</name>
       <url>https://packages.atlassian.com/mvn/maven-external</url>
-      <snapshots>
-        <enabled>true</enabled>
-        <updatePolicy>never</updatePolicy>
-        <checksumPolicy>warn</checksumPolicy>
-      </snapshots>
-      <releases>
-        <enabled>true</enabled>
-        <checksumPolicy>warn</checksumPolicy>
-      </releases>
     </repository>
   </repositories>
   <pluginRepositories>
     <pluginRepository>
       <id>atlassian-public</id>
+	  <name>Atlassian repository</name>
       <url>https://packages.atlassian.com/mvn/maven-external</url>
-      <releases>
-        <enabled>true</enabled>
-        <checksumPolicy>warn</checksumPolicy>
-      </releases>
-      <snapshots>
-        <updatePolicy>never</updatePolicy>
-        <checksumPolicy>warn</checksumPolicy>
-      </snapshots>
     </pluginRepository>
   </pluginRepositories>
   <properties>

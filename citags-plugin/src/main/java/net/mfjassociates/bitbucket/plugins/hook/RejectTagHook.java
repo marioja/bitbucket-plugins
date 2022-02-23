@@ -50,7 +50,7 @@ public class RejectTagHook implements PreRepositoryHook<RepositoryHookRequest>{
 		final Set<String> authorizedUsers=new HashSet<>(Arrays.asList(authorizedUsers1.split(","))); // remove duplicates
 		List<String> illegalTags = hookRequest.getRefChanges().stream().map(change -> change.getRef().getId())
 				.filter(id -> id.startsWith("refs/tags/" + prefix)).collect(Collectors.toList());
-		boolean notAuthorized=authorizedUsers.stream().filter(u -> username.equals(u)).count()==0;
+		boolean notAuthorized=authorizedUsers.stream().filter(u -> username.equalsIgnoreCase(u)).count()==0;
 		if (illegalTags.size() > 0 && notAuthorized) {
 			result = RepositoryHookResult.rejected("IllegalTagPush",
 					MessageFormat.format("The following tags are reserved and cannot be pushed by username {0}: {1}",

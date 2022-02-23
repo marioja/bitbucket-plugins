@@ -4,20 +4,60 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.mfjassociates.bitbucket.plugins</groupId>
   <artifactId>bitbucket-plugins</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>${revision}.${sha1}${changelist}</version>
   <packaging>pom</packaging>
   <modules>
     <module>citags-plugin</module>
   </modules>
   <distributionManagement>
-   <repository>
-     <id>github</id>
-     <name>GitHub marioja Apache Maven Packages</name>
-     <url>https://maven.pkg.github.com/marioja/bitbucket-plugins</url>
-   </repository>
+    <repository>
+      <id>github</id>
+      <name>GitHub marioja Apache Maven Packages</name>
+      <url>https://maven.pkg.github.com/marioja/bitbucket-plugins</url>
+    </repository>
   </distributionManagement>
   <properties>
     <downloadSources>true</downloadSources>
     <downloadJavadocs>true</downloadJavadocs>
+    <revision>1.0</revision>
+    <sha1>0</sha1>
+    <changelist>-SNAPSHOT</changelist>
   </properties>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>flatten-maven-plugin</artifactId>
+        <version>1.1.0</version>
+        <executions>
+          <execution>
+            <id>flatten</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>flatten</goal>
+            </goals>
+            <configuration>
+              <updatePomFile>true</updatePomFile>
+              <flattenMode>resolveCiFriendliesOnly</flattenMode>
+            </configuration>
+          </execution>
+          <execution>
+            <id>flatten.clean</id>
+            <phase>clean</phase>
+            <goals>
+              <goal>clean</goal>
+            </goals>
+            <configuration>
+              <updatePomFile>true</updatePomFile>
+              <flattenMode>resolveCiFriendliesOnly</flattenMode>
+            </configuration>
+          </execution>
+        </executions>
+        <configuration>
+          <updatePomFile>true</updatePomFile>
+          <flattenMode>resolveCiFriendliesOnly</flattenMode>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>

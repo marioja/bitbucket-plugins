@@ -93,7 +93,7 @@ jobs:
       run: echo mvn -B package --no-transfer-progress --file pom.xml -s $GITHUB_WORKSPACE/settings.xml
 
     - name: Publish to GitHub Packages Apache Maven
-      run: mvn -B -DskipTests deploy --no-transfer-progress -s $GITHUB_WORKSPACE/settings.xml
+      run: mvn -B -X -DskipTests deploy --no-transfer-progress -s $GITHUB_WORKSPACE/settings.xml
       env:
         GITHUB_TOKEN: ${{ github.token }}
 

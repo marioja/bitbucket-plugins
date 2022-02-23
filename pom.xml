@@ -9,6 +9,13 @@
   <modules>
     <module>citags-plugin</module>
   </modules>
+  <distributionManagement>
+   <repository>
+     <id>github</id>
+     <name>GitHub marioja Apache Maven Packages</name>
+     <url>https://maven.pkg.github.com/marioja/bitbucket-plugins</url>
+   </repository>
+  </distributionManagement>
   <repositories>
     <repository>
       <id>atlassian-public</id>

@@ -81,7 +81,7 @@ jobs:
             {
               "id": "github",
               "username": "${env.GITHUB_ACTOR}",
-              "password": "${env.GITHUB_TOKEN}",
+              "password": "${env.GITHUB_TOKEN}"
             }
           ]
         output_file: ${{ github.workspace }}/settings.xml

@@ -49,15 +49,8 @@ jobs:
               "id": "github",
               "name": "Gihub Packages Repository",
               "url": "https://maven.pkg.github.com/marioja/bitbucket-plugins",
-              "releases": {
-                "enabled": "true",
-                "updatePolicy": "always",
-                "checksumPolicy": "fail"
-              },
               "snapshots": {
-                "enabled": "false",
-                "updatePolicy": "always",
-                "checksumPolicy": "fail"
+                "enabled": "false"
               }
             }
           ]
@@ -89,16 +82,12 @@ jobs:
               "id": "github",
               "username": "${env.GITHUB_ACTOR}",
               "password": "${env.GITHUB_TOKEN}",
-              "configuration": {
-                "httpConfiguration": {
-                  "all": {
-                    "usePreemptive": "true"
-                  }
-                }
-              }
             }
           ]
         output_file: ${{ github.workspace }}/settings.xml
+
+    - name: Display settings.xml
+      run: cat $GITHUB_WORKSPACE/settings.xml
 
     - name: Build with Maven
       run: mvn -B package --no-transfer-progress --file pom.xml -s $GITHUB_WORKSPACE/settings.xml

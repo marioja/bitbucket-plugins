@@ -44,6 +44,21 @@ jobs:
                 "updatePolicy": "always",
                 "checksumPolicy": "fail"
               }
+            },
+            {
+              "id": "github",
+              "name": "Gihub Packages Repository",
+              "url": "https://maven.pkg.github.com/marioja/bitbucket-plugins",
+              "releases": {
+                "enabled": "true",
+                "updatePolicy": "always",
+                "checksumPolicy": "fail"
+              },
+              "snapshots": {
+                "enabled": "false",
+                "updatePolicy": "always",
+                "checksumPolicy": "fail"
+              }
             }
           ]
         plugin_repositories: >

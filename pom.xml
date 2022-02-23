@@ -16,20 +16,6 @@
      <url>https://maven.pkg.github.com/marioja/bitbucket-plugins</url>
    </repository>
   </distributionManagement>
-  <repositories>
-    <repository>
-      <id>atlassian-public</id>
-	  <name>Atlassian repository</name>
-      <url>https://packages.atlassian.com/mvn/maven-external</url>
-    </repository>
-  </repositories>
-  <pluginRepositories>
-    <pluginRepository>
-      <id>atlassian-public</id>
-	  <name>Atlassian repository</name>
-      <url>https://packages.atlassian.com/mvn/maven-external</url>
-    </pluginRepository>
-  </pluginRepositories>
   <properties>
     <downloadSources>true</downloadSources>
     <downloadJavadocs>true</downloadJavadocs>
